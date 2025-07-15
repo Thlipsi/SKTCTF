@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8" />
+                    <meta name="viewport" content="width=device-width, initial-scale=1" />
+                    <meta name="hash" content="your_real_flag_hash_here" />
+                    <meta name="draw-color" content="rgba(131, 93, 255, 1)">
+                    <meta name="hover-color" content="rgba(131, 93, 255, 0.8)">
+                    <title>SKT - Introduction</title>
+                    <link rel="stylesheet" href="/ctf/styles/challenge.css" />
+                <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; style-src-attr 'none'; object-src 'none'; base-uri 'self';">-->
+                <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self'; style-src-attr 'none'; object-src 'none'; base-uri 'self';">            
+                </head>
+                <body>
+                    <a href="/ctf/categories/introduction/introduction.html" class="back-link">← Back to Introduction</a>
+                    <main>
+                        <h1>Flag 4</h1>
+                        <p><strong>Difficulty:</strong> Medium • <strong>Category:</strong> Introduction</p>
+                        <p>Not everything is as it seems. Sometimes you're given a hint, like an IP address or a common phrase, but the actual flag you need to submit is encoded or transformed in a specific way.<br><br>In this challenge, you’ll be given a **key** and a clue that looks like regular text. It’s your job to apply the key and figure out what the transformed flag should be.<br><br>Example: If the clue is `one-ninety-two-dot-one-sixty-eight`, and the key tells you to convert words to leetspeak, you’d submit something like `SKT{0n3-n1n3ty-tw0-d0t-1-s1xty-8}`.<br><br>This challenge will train you to spot encoded flags and use the right transformation. Watch the format and apply the key!</p>
+                        <a class="download-link" href="/challenges/flag4/flag4.txt" download="flag4.txt">Download flag4.txt</a>
+                        <input type="text" id="flag-input" placeholder="Enter flag here..." />
+                        <button>Check</button>
+                        <p id="result">Note to self: Put a flag hidden here in the future</p>
+                        
+                    </main>
+                    <script src="/ctf/scripts/challenge.js"></script>
+                    <script src="/ctf/scripts/draw.js"></script>
+                </body>
+                </html>
+                

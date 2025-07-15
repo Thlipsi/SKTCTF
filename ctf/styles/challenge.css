@@ -1,0 +1,119 @@
+        :root {
+            --button-color: #FFFFFF;
+            --button-hover: #FFFFFF;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #000;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        #art-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+        }
+
+        .back-link {
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            background-color: rgba(255, 255, 255, 0.05);
+            color: #ccc;
+            padding: 0.4rem 0.8rem;
+            font-size: 1rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            transition: background-color 0.2s ease, color 0.2s ease;
+            z-index: 999;
+        }
+
+        .back-link:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+            color: white;
+        }
+
+        main {
+            max-width: 700px;
+            margin: 8rem auto 4rem;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            color: var(--button-color);
+            /*here*/
+        }
+
+        p {
+            font-size: 1.5rem;
+            color: #ccc;
+            margin-bottom: 1rem;
+        }
+
+        a.download-link {
+            display: inline-block;
+            background: white;
+            color: black;
+            padding: 0.5rem 1rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        a.download-link:hover {
+            background: #ccc;
+        }
+
+        input#flag-input {
+            width: 100%;
+            padding: 0.75rem;
+            font-size: 1rem;
+            border-radius: 0.5rem;
+            border: none;
+            margin-bottom: 1rem;
+        }
+
+        button {
+            padding: 0.5rem 1.5rem;
+            font-size: 1rem;
+            border: none;
+            background: var(--button-color);
+            /*here*/
+            color: black;
+            font-weight: bold;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        button:hover {
+            background-color: var(--button-hover);
+        }
+
+        #result {
+            margin-top: 1rem;
+            font-weight: bold;
+            color: rgba(0, 0, 0, 0);
+        }
+
+        .vibe {
+            font-family: monospace;
+            font-weight: 700;
+            color: var(--button-color);
+            /*here*/
+            margin-top: 2rem;
+            text-align: center;
+            opacity: 0.7;
+        }
