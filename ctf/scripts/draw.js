@@ -3,6 +3,7 @@ let ctx;
 let frameCount = 0;
 const mainColor = document.querySelector('meta[name="draw-color"]');
 const hoverColor = document.querySelector('meta[name="hover-color"]');
+let startTime = performance.now();
 
 if (mainColor) {
     document.documentElement.style.setProperty('--button-color', mainColor.content);
@@ -36,7 +37,8 @@ function rgbaToHex(rgba) {
 }
 
 function draw() {
-    frameCount++;
+    const currentTime = performance.now();
+    const elapsed = (currentTime - startTime) / 20;
     let pathParts = window.location.pathname.split("/");
     let category = "mainpage";
 
@@ -48,20 +50,20 @@ function draw() {
 
     let drawColor = mainColor ? rgbaToHex(mainColor.content) : "#FFFFFF";
     ctx.strokeStyle = drawColor;
-    ctx.lineWidth = 1.5;
+    ctx.lineWidth = 7.5;
     if (category === "introduction") {
-        drawIntroduction(frameCount);
+        drawIntroduction(elapsed);
     }
     else if (category === "cryptography") {
-        drawCryptography(frameCount);
+        drawCryptography(elapsed);
     } else if (category === "enumeration") {
-        drawEnumeration(frameCount);
+        drawEnumeration(elapsed);
     } else if (category === "forensics") {
-        drawForensics(frameCount);
+        drawForensics(elapsed);
     } else if (category === "log_analysis") {
-        drawLogAnalysis(frameCount);
+        drawLogAnalysis(elapsed);
     } else {
-        drawMainPage(frameCount);
+        drawMainPage(elapsed);
     }
 
     requestAnimationFrame(draw);
@@ -101,10 +103,10 @@ function drawIntroduction(t) {
 }
 
 function drawCryptography(t) {
-    if (t % 2 !== 0) {
+    if (Math.floor(t) % 2 !== 0) {
         return;
     }
-    ctx.fillStyle = "rgba(0, 0, 0, 0.005)";
+    ctx.fillStyle = "rgba(0, 0, 0, 0.02)";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     let d = 450;
@@ -177,7 +179,8 @@ function drawForensics(t) {
 }
 
 function drawLogAnalysis(t) {
-    ctx.fillStyle = "rgba(0, 0, 0, 0.03)";
+    t = t / 2;
+    ctx.fillStyle = "rgba(0, 0, 0, 0.02)";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     for (let offset of [0, 200]) {
