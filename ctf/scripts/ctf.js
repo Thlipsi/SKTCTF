@@ -1,3 +1,4 @@
+// --- CTF.JS ---
 function setup() {
     let canvas = createCanvas(window.innerWidth, window.innerHeight);
     canvas.id('art-bg');
