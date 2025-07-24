@@ -224,7 +224,6 @@ function drawMainPage(t) {
         ctx.stroke();
     }
 }
-//squid.wtf
 
 
 function rand(min, max) {
